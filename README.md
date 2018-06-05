@@ -13,4 +13,4 @@ An interactive about me quiz that asks 5 questions about myself. I hope you can 
 * Follow the directions on the terminal to play the game!
 
 ## What it looks like
-![about-me](/Lab01-About-Me-Quiz/About-Me-Quiz/About-Me-Quiz/assets/about-me-quiz-visual.PNG)
+![about-me](/About-Me-Quiz/About-Me-Quiz/assets/about-me-quiz-visual.PNG)
