@@ -57,6 +57,7 @@ namespace About_Me_Quiz
                 Console.WriteLine("1) Tanaka");
                 Console.WriteLine("2) Katsumata");
                 Console.WriteLine("3) William");
+                Console.Write("Your guess: ");
                 //Reads the user's input and saves it
                 string userAns = Console.ReadLine();
                 //Checks the user input to see if it is correct 
@@ -83,6 +84,7 @@ namespace About_Me_Quiz
         static string guessFavoriteColor()
         {
             Console.WriteLine("What is my favorite color?");
+            Console.Write("Your guess: ");
             string userAns = Console.ReadLine();
             if (userAns.ToLower() == "red")
             {
@@ -98,6 +100,7 @@ namespace About_Me_Quiz
         static bool guessMyPets()
         {
             Console.WriteLine("Dog or Cat? Which do you think I own?");
+            Console.Write("Your guess: ");
             string userAns = Console.ReadLine();
             if (userAns.ToLower() == "dog")
             {
@@ -126,6 +129,7 @@ namespace About_Me_Quiz
         static int guessMySibling()
         {
             Console.WriteLine("How many siblings do you think I have?");
+            Console.Write("Your guess: ");
             string userAns = Console.ReadLine();
             //Parse the string into an int
             int userNum = Int32.Parse(userAns);
@@ -139,6 +143,7 @@ namespace About_Me_Quiz
             Console.WriteLine("2) Seattle WA");
             Console.WriteLine("3) Pittsburgh PA");
             Console.WriteLine("4) Denver Colorado");
+            Console.Write("Your guess: ");
             string userAns = Console.ReadLine();
             if (userAns == "3")
             {
