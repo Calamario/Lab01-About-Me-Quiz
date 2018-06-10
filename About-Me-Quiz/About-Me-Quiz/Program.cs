@@ -16,36 +16,36 @@ namespace About_Me_Quiz
             Console.Write("Hit Enter to Play");
             Console.ReadLine();
             //Invoke the first question
-            guessMyMiddleName();
-            hitEnter();
+            GuessMyMiddleName();
+            HitEnter();
             //Invoke the second question and save the returned string into colorResult
-            string colorResult = guessFavoriteColor();
+            string colorResult = GuessFavoriteColor();
             Console.WriteLine(colorResult);
-            hitEnter();
+            HitEnter();
             //Invoke the third question and pass its returned bool to another method
-            bool petResult = guessMyPets();
-            showPetResult(petResult);
-            hitEnter();
+            bool petResult = GuessMyPets();
+            ShowPetResult(petResult);
+            HitEnter();
             //Invoke the fourth question
-            int sibilingResult = guessMySibling();
+            int sibilingResult = GuessMySibling();
             Console.WriteLine($"You think I have {sibilingResult}? I'm an only child.");
-            hitEnter();
+            HitEnter();
             //Invoke the last question
-            guessMyBirthPlace();
+            GuessMyBirthPlace();
             Console.WriteLine("Thanks for playing!");
             Console.ReadLine();
 
         }
 
         //the continue method that comes after each question. Also clears the terminal
-        static void hitEnter()
+        static void HitEnter()
         {
             Console.Write("Hit Enter to Continue");
             Console.ReadLine();
             Console.Clear();
         }
 
-        static void guessMyMiddleName()
+        static void GuessMyMiddleName()
         {
             // Changes this flag to false when user inputs a viable answer which will stop the do while loop.
             bool flag = true;
@@ -81,7 +81,7 @@ namespace About_Me_Quiz
         }
         
         //Question 2 that returns a srting. Return string depends on the correct answer.
-        static string guessFavoriteColor()
+        static string GuessFavoriteColor()
         {
             Console.WriteLine("What is my favorite color?");
             Console.Write("Your guess: ");
@@ -97,7 +97,7 @@ namespace About_Me_Quiz
         }
 
         //Question 3 that returns a boolean depending on the correct answer
-        static bool guessMyPets()
+        static bool GuessMyPets()
         {
             Console.WriteLine("Dog or Cat? Which do you think I own?");
             Console.Write("Your guess: ");
@@ -113,7 +113,7 @@ namespace About_Me_Quiz
         }
 
         //Using the boolean returned by the guessMyPets method as an arguement, prints answer result on the terminal 
-        static void showPetResult(bool doIPet)
+        static void ShowPetResult(bool doIPet)
         {
             if (doIPet == true)
             {
@@ -126,17 +126,25 @@ namespace About_Me_Quiz
         }
 
         //Question 4 that returns the user input as an integer
-        static int guessMySibling()
+        static int GuessMySibling()
         {
-            Console.WriteLine("How many siblings do you think I have?");
-            Console.Write("Your guess: ");
-            string userAns = Console.ReadLine();
-            //Parse the string into an int
-            int userNum = Int32.Parse(userAns);
-            return userNum;
+            try
+            {
+                Console.WriteLine("How many siblings do you think I have? Enter a number.");
+                Console.Write("Your guess: ");
+                string userAns = Console.ReadLine();
+                //Parse the string into an int
+                int userNum = Int32.Parse(userAns);
+                return userNum;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("You didn't input a number! I'm gonna assume you just said 2");
+                return 2;
+            }
         }
 
-        static void guessMyBirthPlace()
+        static void GuessMyBirthPlace()
         {
             Console.WriteLine("Where do you think I was born?");
             Console.WriteLine("1) Tokyo Japan");
