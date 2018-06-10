@@ -96,7 +96,7 @@ namespace About_Me_Quiz
             }
         }
 
-        //Question 3 that returns a boolean depending on the correct answer
+        //Question 3 that returns a boolean depending on the correct answer.
         static bool GuessMyPets()
         {
             Console.WriteLine("Dog or Cat? Which do you think I own?");
